@@ -22,7 +22,7 @@ public class AccountResourceTest {
                 .get("/account/john")
                 .then()
                 .statusCode(HttpStatus.SC_OK)
-                .body("$.login", is("john"));
+                .body("login", is("john"));
     }
 
 }

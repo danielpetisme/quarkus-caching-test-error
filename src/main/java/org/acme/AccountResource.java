@@ -10,6 +10,6 @@ public class AccountResource {
     @Path("/{login}")
     @Produces(MediaType.APPLICATION_JSON)
     public User getOne(@PathParam("login") String login) {
-        return User.find("FROM User u LEFT JOIN FETCH u.roles WHERE u.login = ?1", login).firstResult();
+        return User.find("login", login).firstResult();
     }
 }
